@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class=" js csstransforms3d"><head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>修改密码</title>
+	<link rel="stylesheet" href="/static/css/base.css">
+	<link rel="stylesheet" href="/static/css/page.css">
+	<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/static/js/main.js"></script>
+	<script type="text/javascript" src="/static/js/modernizr.js"></script>
+</head>
+
+<body style="background: #f6f5fa;">
+	<!--content S-->
+	<div class="super-content">
+		<div class="superCtab">
+			<div class="publishArt">
+				<h4>注册用户</h4>
+				<div class="pubMain">
+					<h5 class="pubtitle">用户名</h5>
+                    <form action="{% url 'App03:user_register' %}" method="post">
+                        {% csrf_token %}
+					<div class="pub-txt-bar">
+						<input type="text" class="shuruTxt shuruTxt2" name="username">
+						<div class="disabled">{{ form.username.errors }}</div>
+					</div>
+					<h5 class="pubtitle">注册密码<span>（数字、字母、符号组合，最少8个字符）</span></h5>
+					<div class="pub-txt-bar">
+						<input type="password" class="shuruTxt shuruTxt2" name="passwd">
+						<div class="disabled">{{ form.passwd.errors }}</div>
+					</div>
+					<h5 class="pubtitle">确认密码</h5>
+					<div class="pub-txt-bar">
+						<input type="password" class="shuruTxt shuruTxt2" name="confirm">
+						<div class="disabled">{{ form.confirm.errors }}</div>
+					</div>
+                        <h5 class="pubtitle">注册时间</h5>
+					    <div class="pub-txt-bar">
+						<input type="text" class="shuruTxt shuruTxt2" name="regtime">
+						<div class="disabled">{{ form.regtime.errors }}</div>
+					    </div>
+                        <h5 class="pubtitle">注册手机</h5>
+					    <div class="pub-txt-bar">
+						<input type="text" class="shuruTxt shuruTxt2" name="phone">
+						<div class="disabled">{{ form.phone.errors }}</div>
+					    </div>
+                        <h5 class="pubtitle">注册邮箱</h5>
+					    <div class="pub-txt-bar">
+						<input type="text" class="shuruTxt shuruTxt2" name="email">
+						<div class="disabled">{{ form.email.errors }}</div>
+					    </div>
+					<div class="pub-btn">
+						<input type="submit" id="" value="确定" class="saveBtn">
+						<input type="button" id="" value="重置" class="resetBtn">
+					</div>
+                    </form>
+				</div>
+			</div>
+		
+		</div>
+		<!--main-->
+		
+	</div>
+	<!--content E-->
+	
+
+
+</body></html>
